@@ -6,9 +6,9 @@ app.use(express.json())
 require('dotenv').config()
 
 
-mongoose.connect(process.env.MONGO_URI,(err)=>err?console.log(err):console.log(`database connected`))
+mongoose.connect(process.env.MONGO_URI,(err)=>{err?console.log(err): console.log(database connected)});
 
 
 app.use('/api/user',require('./roots/userRoute'))
 
-app.listen(process.env.PORT, (err)=>err?console.log(err):console.log(`server is runing`))
+app.listen(process.env.PORT, (err)=>{err? console.log(err):console.log('server is running')});
